@@ -1,7 +1,7 @@
 import { ConfigProvider, Select } from "antd";
 import Bar_Chart from "../Chart/BarChart";
 
-import { AllIcons } from "../../../images/AllImages";
+import { AllIcons } from "../../../public/images/AllImages";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import UsersTable from "../Tables/UsersTable";

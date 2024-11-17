@@ -33,7 +33,9 @@ const ViewEarningModal = ({
           <div className="rounded-xl bg-[#F5F9FE] p-5">
             <div className="flex justify-start items-center gap-2 mt-3 mb-5">
               <img
-                src={currentRecord.avatar || "../../../images/userImage.png"}
+                src={
+                  currentRecord.avatar || "../../../public/images/userImage.png"
+                }
                 alt="avatar"
                 className="w-32 h-32 rounded-lg mr-2"
               />
@@ -96,7 +98,7 @@ const ViewEarningModal = ({
                   {currentRecord.amount}
                 </p>
               </div>
-
+             
               <div className="flex gap-2 mb-3">
                 <p className="text-sm sm:text-base lg:text-lg font-semibold">
                   Payment Method:

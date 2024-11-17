@@ -2,7 +2,7 @@ import { Button, Form } from "antd";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import OTPInput from "react-otp-input";
-import { AllImages } from "../../../images/AllImages";
+import { AllImages } from "../../../public/images/AllImages";
 import { GoArrowLeft } from "react-icons/go";
 
 const OtpPage = () => {
@@ -29,10 +29,11 @@ const OtpPage = () => {
           <div className="">
             <div className="">
               <h1 className="text-[24px] font-medium text-start mb-[24px] mt-[35px] whitespace-nowrap flex gap-2 justify-center items-center">
-                <Link to={`/forgot-password`}>
-                  <GoArrowLeft className="text-3xl" />{" "}
-                </Link>
-                Enter verification code
+               <Link to={`/forgot-password`}><GoArrowLeft className="text-3xl" /> </Link>
+               
+               
+               
+               Enter verification code
               </h1>
               {/* <p className="text-[16px] mb-[24px] ">
                 Please check your email. We have sent a code to contact

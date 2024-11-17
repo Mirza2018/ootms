@@ -15,7 +15,7 @@ const countryCodes = [
   { label: "+54", value: "AR", flag: "https://flagcdn.com/w320/ar.png" }, // Argentina
   { label: "+90", value: "TR", flag: "https://flagcdn.com/w320/tr.png" }, // Turkey
 ];
-
+ 
 const Profile = () => {
   // eslint-disable-next-line no-unused-vars
   const [profileData, setProfileData] = useState({
@@ -25,7 +25,7 @@ const Profile = () => {
     phoneCode: "BD",
     phoneNumber: "01846875456",
     birthday: "2000-01-01",
-    img: "/images/userDemo.png",
+    img:"/public/images/userDemo.png"
   });
   const navigate = useNavigate();
 
@@ -76,6 +76,8 @@ const Profile = () => {
               }}
             >
               <Form layout="vertical">
+
+                
                 <Form.Item
                   label={
                     <label
@@ -95,6 +97,9 @@ const Profile = () => {
                     readOnly
                   />
                 </Form.Item>
+
+
+
 
                 <Form.Item
                   label={

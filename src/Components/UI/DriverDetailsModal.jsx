@@ -26,7 +26,7 @@ const DriverDetailsModal = ({
           <div className="flex justify-start items-center p-4 ">
             {/* Avatar */}
             <img
-              src="/images/userDemo.png"
+              src='/public/images/userDemo.png'
               alt={currentRecord?.driverName}
               className="w-14 h-14 sm:w-20  sm:h-20 rounded-lg mr-4"
             />
@@ -37,9 +37,7 @@ const DriverDetailsModal = ({
 
           <div className="mt-5">
             <div className=" text-start text-lg">
-              <h1 className="text-lg font-semibold mb-[18px]">
-                Personal Information
-              </h1>
+            <h1 className="text-lg font-semibold mb-[18px]">Personal Information</h1>
               <div className="sm:flex gap-1">
                 <div className="font-bold">Title:</div>
                 <div>{currentRecord?.role}</div>
@@ -62,12 +60,12 @@ const DriverDetailsModal = ({
                 <div className="font-bold">Phone:</div>
                 <div>{currentRecord?.phone}</div>
               </div>
-
+            
               <div className="sm:flex gap-1">
                 <div className="font-bold">Date of Birth:</div>
                 <div>{currentRecord?.dateOfBirth}</div>
               </div>
-
+             
               {/* <div className="sm:flex gap-1">
                 <div className="font-bold">Address:</div>
                 <div>{currentRecord?.address}</div>
@@ -77,22 +75,27 @@ const DriverDetailsModal = ({
                 <div>{currentRecord?.truckNumber}</div>
               </div>
               <h1 className="text-lg font-semibold my-[18px]">Documents</h1>
+             
+             <div className="flex gap-3">
 
-              <div className="flex gap-3">
                 <div className="bg-[#DCDCF0] w-fit h-fit p-2 rounded-lg">
                   <div className="bg-[#2b4257] rounded-full  w-fit h-fit py-5 px-6">
-                    <img src="/images/pdf.png" className="w-8 h-auto" alt="" />
+                    <img src="/public/images/pdf.png" className="w-8 h-auto" alt="" />
                   </div>
                   <p className="text-center mt-1">Resume.pdf</p>
                 </div>
 
                 <div className="bg-[#DCDCF0] w-fit h-fit p-2 rounded-lg">
                   <div className="bg-[#2b4257] rounded-full  w-fit h-fit py-5 px-6">
-                    <img src="/images/pdf.png" className="w-8 h-auto" alt="" />
+                    <img src="/public/images/pdf.png" className="w-8 h-auto" alt="" />
                   </div>
                   <p className="text-center mt-1">Certificate.pdf</p>
                 </div>
+
               </div>
+             
+
+              
             </div>
           </div>
         </div>
@@ -104,6 +107,7 @@ const DriverDetailsModal = ({
           Block
         </button>    
         </div> */}
+        
       </div>
     </Modal>
   );

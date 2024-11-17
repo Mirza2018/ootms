@@ -48,7 +48,7 @@ const DriverRequest = () => {
   const handleAccept = (id) => {
     // Log for debugging purposes
     console.log("Accepting request with ID:", id);
-
+    
     // Only update the accepted status of the specific request
     const updatedRequests = requests.map((request) =>
       request.id === id ? { ...request, accepted: true } : request
@@ -103,45 +103,51 @@ const DriverRequest = () => {
         </div>
 
         <div className="rounded-b-lg py-3">
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredData.map((request) => (
               <div
                 key={request.id}
                 className="bg-gray-100 p-4 rounded-lg shadow-md flex "
               >
-                <div className="flex justify-center items-center">
-                  <img src="/images/userDemo.png" className="me-2" alt="" />
-                </div>
 
-                <div>
-                  <span
-                    onClick={() => handleTitleClick(request)}
-                    className="text-xl font-bold text-[#013564] cursor-pointer"
+                <div className="flex justify-center items-center">
+            <img src="/public/images/userDemo.png" className="me-2" alt="" />
+               </div>
+
+          <div>
+            <span
+                  onClick={() => handleTitleClick(request)}
+                  className="text-xl font-bold text-[#013564] cursor-pointer"
+                >
+                  {request.driverName}
+                </span>
+                <p className="text-gray-600">Truck: {request.truckNumber}</p>
+                <p className="text-gray-600">Phone: {request.phone}</p>
+                <div className="mt-4">
+                  <Button
+                    className={`px-5 py-1 rounded-lg mr-2 border ${
+                      request.accepted
+                        ? "bg-green-600 font-bold text-white border-green-600"
+                        : "bg-[#013564] text-white border-[#013564] "
+                    }`}
+                    onClick={() => handleAccept(request.id)}
+                    disabled={request.accepted}
                   >
-                    {request.driverName}
-                  </span>
-                  <p className="text-gray-600">Truck: {request.truckNumber}</p>
-                  <p className="text-gray-600">Phone: {request.phone}</p>
-                  <div className="mt-4">
-                    <Button
-                      className={`px-5 py-1 rounded-lg mr-2 border ${
-                        request.accepted
-                          ? "bg-green-600 font-bold text-white border-green-600"
-                          : "bg-[#013564] text-white border-[#013564] "
-                      }`}
-                      onClick={() => handleAccept(request.id)}
-                      disabled={request.accepted}
-                    >
-                      {request.accepted ? "Accepted" : "Accept"}
-                    </Button>
-                    <Button
-                      className="bg-white text-[#013564] px-5 py-1 rounded-lg border border-[#013564]"
-                      onClick={() => handleRevision(request)}
-                    >
-                      Delete
-                    </Button>
-                  </div>
+                    {request.accepted ? "Accepted" : "Accept"}
+                  </Button>
+                  <Button
+                    className="bg-white text-[#013564] px-5 py-1 rounded-lg border border-[#013564]"
+                    onClick={() => handleRevision(request)}
+                  >
+                    Delete
+                  </Button>
                 </div>
+          </div>
+                
+
+
+
               </div>
             ))}
           </div>
