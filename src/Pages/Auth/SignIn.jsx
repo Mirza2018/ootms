@@ -1,6 +1,6 @@
 import { Checkbox, Button, Input, Form } from "antd";
 import { Link, useNavigate } from "react-router-dom";
-import { AllImages } from "../../../public/images/AllImages";
+import { AllImages } from "../../../images/AllImages";
 import { IoLockClosedOutline, IoMailOpenOutline } from "react-icons/io5";
 
 const SignIn = () => {

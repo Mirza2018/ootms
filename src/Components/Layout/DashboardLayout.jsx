@@ -1,18 +1,18 @@
 import Topbar from "../Shared/Topbar";
-import dashboardLogo from "../../../public/images/dashboard-logo/dashboard.svg";
-import users from "../../../public/images/dashboard-logo/users.svg";
-import mvr from "../../../public/images/dashboard-logo/mvr.svg";
-import earning from "../../../public/images/dashboard-logo/earning.svg";
-import subscription from "../../../public/images/dashboard-logo/subscription.svg";
-import setting from "../../../public/images/dashboard-logo/setting.svg";
-import logout from "../../../public/images/dashboard-logo/logout.svg";
+import dashboardLogo from "../../../images/dashboard-logo/dashboard.svg";
+import users from "../../../images/dashboard-logo/users.svg";
+import mvr from "../../../images/dashboard-logo/mvr.svg";
+import earning from "../../../images/dashboard-logo/earning.svg";
+import subscription from "../../../images/dashboard-logo/subscription.svg";
+import setting from "../../../images/dashboard-logo/setting.svg";
+import logout from "../../../images/dashboard-logo/logout.svg";
 
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { Content, Header } from "antd/es/layout/layout";
 import { useEffect, useState } from "react";
-import { AllImages } from "../../../public/images/AllImages";
+import { AllImages } from "../../../images/AllImages";
 
 const DashboardLayout = () => {
   const location = useLocation();
@@ -317,12 +317,14 @@ const DashboardLayout = () => {
           />
         </Sider>
         <Layout style={{ background: "#E8E8F5", padding: "0px 20px" }}>
-          <Header  style={{
+          <Header
+            style={{
               background: "#ffffff",
               position: "sticky",
               top: 0,
               zIndex: 999,
-            }}>
+            }}
+          >
             <Topbar collapsed={collapsed} setCollapsed={setCollapsed} />
           </Header>
           <Content>

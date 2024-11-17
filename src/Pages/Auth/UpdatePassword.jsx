@@ -2,7 +2,7 @@ import { Button, Form, Input } from "antd";
 
 import { IoLockClosedOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import { AllImages } from "../../../public/images/AllImages";
+import { AllImages } from "../../../images/AllImages";
 import { GoArrowLeft } from "react-icons/go";
 
 const ChangePassword = () => {

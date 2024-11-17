@@ -1,13 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { SearchOutlined } from "@ant-design/icons";
-import {
-  Input,
-  ConfigProvider,
-  Table,
-  Button,
-  Modal,
-  Tooltip,
-} from "antd";
+import { Input, ConfigProvider, Table, Button, Modal, Tooltip } from "antd";
 import axios from "axios";
 export default function Users() {
   const [searchText, setSearchText] = useState("");
@@ -185,22 +178,32 @@ export default function Users() {
                 <p className="font-bold mt-2 text-2xl ">Patient Information</p>
                 <div className="text-left mt-4 space-y-2 text-lg">
                   <p className="font-semibold">
-                    Name: <span className="font-normal">{currentRecord.userName}</span>
+                    Name:{" "}
+                    <span className="font-normal">
+                      {currentRecord.userName}
+                    </span>
                   </p>
-                  <p  className="font-semibold">
-                    Email: <span className="font-normal">{currentRecord.email}</span>
+                  <p className="font-semibold">
+                    Email:{" "}
+                    <span className="font-normal">{currentRecord.email}</span>
                   </p>
                   <p className="font-semibold">
                     Phone Number:{" "}
-                    <span className="font-normal">{currentRecord.contactNumber}</span>
+                    <span className="font-normal">
+                      {currentRecord.contactNumber}
+                    </span>
                   </p>
-                  <p  className="font-semibold">
+                  <p className="font-semibold">
                     Date of Birth:{" "}
-                    <span className="font-normal">{currentRecord.dateOfBirth}</span>
+                    <span className="font-normal">
+                      {currentRecord.dateOfBirth}
+                    </span>
                   </p>
-                  <p  className="font-semibold">
+                  <p className="font-semibold">
                     Joined:{" "}
-                    <span className="font-normal">{currentRecord.joiningDate}</span>
+                    <span className="font-normal">
+                      {currentRecord.joiningDate}
+                    </span>
                   </p>
                   {/* <p>
                 NID/Passport Number:{" "}
@@ -215,7 +218,7 @@ export default function Users() {
                 <p className="font-bold mt-2 text-2xl ">Documents</p>
                 <div className="bg-[#DCDCF0] w-fit h-fit p-2 rounded-lg">
                   <div className="bg-[#2b4257] rounded-full  w-fit h-fit py-5 px-6">
-                    <img src="/public/images/pdf.png" className="w-8 h-auto" alt="" />
+                    <img src="/images/pdf.png" className="w-8 h-auto" alt="" />
                   </div>
                   <p className="text-center mt-1">NID.pdf</p>
                 </div>
